@@ -1,0 +1,26 @@
+{
+  "name": "swp_manager",
+  "version": "1.0.0",
+  "description": "Sudan White Pages Manager",
+  "main": "server.js",
+  "dependencies": {
+    "angular-bootstrap-modal": "^1.0.8",
+    "angular-cookies": "^1.6.1",
+    "angular-ui-bootstrap": "^2.5.6",
+    "body-parser": "^1.10.2",
+    "connect-mongo": "^2.0.1",
+    "cookie-parser": "^1.4.3",
+    "date-shortcode": "^1.0.0",
+    "express": "^4.11.1",
+    "express-session": "^1.15.6",
+    "mongoose": "latest",
+    "mongoose-validator": "^2.0.2",
+    "util": "^0.10.3",
+    "var_dump": "^1.0.3"
+  },
+  "repository": {
+    "type": "git"
+  },
+  "author": "Ahmed Suliman Albashir Mohamed",
+  "license": "Private"
+}
