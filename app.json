@@ -1,0 +1,16 @@
+{
+  "name": "sudanwhitepages",
+  "description": "Sudan White Pages Manager",
+  "scripts": {
+  },
+  "env": {
+  },
+  "formation": {
+  },
+  "addons": [
+
+  ],
+  "buildpacks": [
+
+  ]
+}
