@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app="swp_manager"  ng-controller="HomeController">
+
+<head>
+    <title>Sudan White Pages</title>
+
+    <link rel="stylesheet" type="text/css" href="files/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="files/css/toaster.min.css" />
+    <link rel="stylesheet" type="text/css" href="files/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="files/css/config.css" />
+    <link rel="stylesheet" type="text/css" href="files/css/skins.css" />
+
+
+    <script src="files/js/jquery.min.js"></script>
+    <script src="files/js/bootstrap.min.js"></script>
+    <script src="files/js/angular.min.js"></script>
+    <script src="files/js/angular-route.js"></script>
+    <script src="files/js/angular-cookies.js"></script>
+    <script src="files/js/angular-animate.min.js"></script>
+    <script src="files/js/ui-bootstrap-tpls-2.5.0.min.js"></script>
+
+
+
+    <script src="app.js"></script>
+    <script src="services/PathService.js"></script>
+    <script src="controllers/HomeController.js"></script>
+    <script src="controllers/Contacts/AddController.js"></script>
+    <script src="controllers/Contacts/DetailsController.js"></script>
+    <script src="controllers/Contacts/EditController.js"></script>
+    <script src="controllers/Contacts/RemoveController.js"></script>
+    <script src="controllers/LoginController.js"></script>
+    
+</head>
+
+<body >
+    
+    <div class="container">
+        <div ng-view></div>
+    </div>
+
+ 
+</body>
+
+</html>

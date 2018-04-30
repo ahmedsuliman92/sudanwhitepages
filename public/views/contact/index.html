@@ -1,0 +1,42 @@
+<div ng-include="'views/header.html'"></div>
+<h2>Contacts</h2>
+<p>
+	<div class="table-icon btn-primary" ng-click="vm.add()">
+        <i class="fa fa-plus"></i>
+    </div>
+</p>
+<table class="table table-hover">
+    <tr>
+        <th>Name</th>
+        <th>Location</th>
+        <th>Number</th>
+        <th>Job</th>
+        <th>Details</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+    <tr ng-repeat="contact in vm.contacts">
+        <td>{{ contact.ContactName }}</td>
+        <td>{{ contact.ContactLocation }}</td>
+        <td>{{ contact.ContactNumber }}</td>
+        <td>{{ contact.ContactJob }}</td>
+
+		                <td>
+                    <div class="table-icon btn-info" ng-click="vm.details(contact._id)">
+                        <i class="fa fa-external-link"></i>
+                    </div>
+
+                </td>
+                <td>
+                    <div class="table-icon btn-warning" ng-click="vm.edit(contact._id)">
+                        <i class="fa fa-edit"></i>
+                    </div>
+                </td>
+                <td>
+                    <div class="table-icon btn-danger" ng-click="vm.remove(contact._id)">
+                        <i class="fa fa-times"></i>
+                    </div>
+
+                </td>
+    </tr>
+</table>

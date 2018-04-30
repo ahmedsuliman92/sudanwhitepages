@@ -1,0 +1,43 @@
+<div class="navbar navbar-fixed-top skin-{{ vm.skin }} " ng-controller="HomeController">
+    <div class=" container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar skin-white"></span>
+                <span class="icon-bar skin-white"></span>
+                <span class="icon-bar skin-white"></span>
+            </button>
+            <a href="#/" class="navbar-brand">Sudan WhitePages</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="{{ vm.home }}">
+                    <a href="#!/">Home</a>
+                </li>
+                <li class="{{ vm.about }}">
+                    <a href="#!/About">About</a>
+                </li>
+            </ul>
+
+
+            <ul class="nav navbar-nav navbar-right" ng-if="vm.loginstate">
+                <li>
+                    <a href="#!/">Hello User : {{ vm.usr_fname }} !</a>
+                </li>
+                <li>
+                    <a href="#!/" ng-click="vm.logout()">Logout</a>
+                </li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right" ng-if="!vm.loginstate">
+                <li>
+                    <a href="#!/">Hello : Guest</a>
+                </li>
+                <li>
+                    <a ng-click="vm.log_in()">Login</a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+
+</div>

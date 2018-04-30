@@ -1,0 +1,68 @@
+<div class="modal-header">
+    <h3 class="modal-title" id="modal-title">Edit</h3>
+</div>
+
+<form name="form" novalidate ng-submit="vm.save()">
+<div class="modal-body" id="modal-body">
+    
+    <div class="form-horizontal">
+        <div class="form-group" ng-class="{ 'has-error': form.ContactName.$invalid }">
+            <label for="ContactName" class="control-label col-md-4 pull-left">Name</label>
+            <div class="col-md-8">
+                <input type="text" name="ContactName" class="form-control" required ng-model="vm.model.ContactName" placeholder="Contact Name"
+                />
+            </div>
+
+            <div class="col-md-12">
+                <span class="alert alert-danger help-block" ng-show="form.ContactName.$error.required">(*) Required</span>
+            </div>
+        </div>
+
+        <div class="form-group" ng-class="{ 'has-error': form.ContactLocation.$invalid }">
+            <label for="ContactLocation" class="control-label col-md-4">Location</label>
+            <div class="col-md-8">
+                <input type="text" name="ContactLocation" class="form-control" required ng-model="vm.model.ContactLocation" />
+            </div>
+            <div class="col-md-12">
+                <span class="alert alert-danger help-block" ng-show="form.ContactLocation.$error.required">(*) Required</span>
+            </div>
+        </div>
+
+        <div class="form-group" ng-class="{ 'has-error': form.ContactNumber.$invalid }">
+            <label for="ContactNumber" class="control-label col-md-4">Phone</label>
+            <div class="col-md-8">
+                <input type="text" name="ContactNumber" id="ContactNumber" ng-pattern="/^(!?(\+?249)|0)\d{9}$/" class="form-control" required ng-model="vm.model.ContactNumber"
+                />
+            </div>
+
+            <div class="col-md-12">
+                <span class="alert alert-danger help-block" ng-show="form.ContactNumber.$error.required">(*) Required</span>
+                <span class="alert alert-danger help-block" ng-show="form.ContactNumber.$error.pattern">(*) Is not Contact Number</span>
+            </div>
+        </div>
+
+        <div class="form-group" ng-class="{ 'has-error': form.ContactJob.$invalid }">
+            <label for="ContactJob" class="control-label col-md-4">Job</label>
+            <div class="col-md-8">
+                <input type="text" name="ContactJob" id="ContactJob" class="form-control" required ng-model="vm.model.ContactJob" />
+            </div>
+            <div class="col-md-12">
+                <span class="alert alert-danger help-block" ng-show="form.ContactJob.$error.required">(*) Required</span>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+
+<div class="modal-footer">
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Save" id="save" ng-disabled="!form.$valid" class="btn btn-primary" />
+            <input type="button" value="Cancel" class="btn btn-warning" ng-click="vm.closeModal()" />
+        </div>
+    </div>
+</div>
+
+</form>

@@ -1,0 +1,33 @@
+<div class="modal-header">
+    <h3 class="modal-title" id="modal-title">Details</h3>
+</div>
+<div class="modal-body" id="modal-body">
+    <hr />
+    <table class="table table-bordered">
+        <tr>
+            <td>Contact Name</td>
+            <td>{{ vm.model.ContactName }}</td>
+        </tr>
+        <tr>
+            <td>Contact Location</td>
+            <td>{{ vm.model.ContactLocation }}</td>
+        </tr>
+        <tr>
+            <td>Contact Number</td>
+            <td>{{ vm.model.ContactNumber }}</td>
+        </tr>
+        <tr>
+            <td>Contact Job</td>
+            <td>{{ vm.model.ContactJob }}</td>
+        </tr>
+    </table>
+</div>
+
+<div class="modal-footer">
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="button" id="save" value="Edit" class="btn btn-primary" ng-click="vm.edit()" />
+            <input type="button" value="Cancel" class="btn btn-warning" ng-click="vm.closeModal()" />
+        </div>
+    </div>
+</div>

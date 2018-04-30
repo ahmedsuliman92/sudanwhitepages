@@ -1,0 +1,36 @@
+<div class="modal-header">
+    <h3 class="modal-title" id="modal-title">Remove</h3>
+</div>
+
+<div class="modal-body" id="modal-body">
+
+        <h3>Are you sure to want remove this record?</h3>
+    <hr />
+    <table class="table table-bordered">
+        <tr>
+            <td>Name</td>
+            <td>{{ vm.model.ContactName }}</td>
+        </tr>
+        <tr>
+            <td>Location</td>
+            <td>{{ vm.model.ContactLocation }}</td>
+        </tr>
+        <tr>
+            <td>Number</td>
+            <td>{{ vm.model.ContactNumber }}</td>
+        </tr>
+        <tr>
+            <td>Job</td>
+            <td>{{ vm.model.ContactJob }}</td>
+        </tr>
+    </table>
+</div>
+
+<div class="modal-footer">
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="button" id="save" value="Delete" class="btn btn-danger" ng-click="vm.remove(vm.model._id)" />
+            <input type="button" value="Cancel" class="btn btn-warning" ng-click="vm.closeModal()" />
+        </div>
+    </div>
+</div>
