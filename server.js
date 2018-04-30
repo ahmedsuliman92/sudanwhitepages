@@ -10,7 +10,7 @@ app.use(cookieParser());
 var rest = require("./api");
 var api = new rest(app);
 
-var port = 3333;
+var port = 80;
 
 app.listen(port);
 
