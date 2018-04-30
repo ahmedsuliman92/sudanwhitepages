@@ -13,7 +13,7 @@ function api(app) {
     var Login = require('./public/models/Login');
 
     app.use(cookieParser());
-    mongoose.connect('mongodb://localhost/swp_project', function (err) {
+    mongoose.connect('mongodb://user:123@ds263619.mlab.com:63619/swp_project', function (err) {
 
         if (err) throw err;
 
